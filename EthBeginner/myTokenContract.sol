@@ -18,8 +18,8 @@ pragma solidity 0.8.18;
 contract MyToken {
 
     // public variables here
-    string public tokenName = "Deba";
-    string public tokenAbbrv = "DB";
+    string public token_Name = "Deba";
+    string public token_Abbreviation = "DB";
     uint public totalSupply = 0;
 
 
