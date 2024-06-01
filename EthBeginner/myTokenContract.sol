@@ -35,7 +35,7 @@ contract MyToken {
 
     // burn function
     function burn(address ad, uint value ) public {
-        if (totalSupply>=value) {
+        if (balances [ad] >=value) {
             totalSupply -= value;
             balances [ad] -= value; 
         }
@@ -43,7 +43,7 @@ contract MyToken {
 
     // modified burn function that returns an error message when total supply is insuffiecient
     function burnMod(address ad, uint value ) public {
-        require(totalSupply >= value, "Insufficient balance");
+        require(balances [ad] >= value, "Insufficient balance");
         totalSupply -= value;
         balances [ad] -= value; 
     
