@@ -30,7 +30,7 @@ To interact with the ErrorHandling contract:
 
    Once you are on the Remix website compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.0", and then click on the "Compile ErrorHandling.sol" button.
 
-  Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "ErrorHandling" contract from the dropdown menu, and then click on the "Deploy" button.
+   Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the  left-hand sidebar. Select the "ErrorHandling" contract from the dropdown menu, and then click on the "Deploy" button.
 
 3. **Interact with Functions**: After deployment, call the `deposit`, `withdrawA`, and `withdrawR` functions with integer values to observe the error handling mechanisms in action.
    
