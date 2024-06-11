@@ -1,21 +1,26 @@
+# ErrorHandling Smart Contract
 
-# My Token Contract
+ErrorHandling is a simple Solidity smart contract that showcases different error handling mechanisms, including `require()`, `assert()`, and `revert()`. This contract enables users to deposit and withdraw funds while enforcing various conditions to maintain contract integrity.
 
-MyTokenContract is a simple smart contract written in Solidity. This contract creates a custom token with basic functionalities like minting and burning tokens. We can see the name of the Token, its abbreviation, the total supply of the  token, the balance of that token in a wallet.
-## Getting Started
+## Contract Overview
 
-### Executing program
+The ErrorHandling contract allows users to interact with three main functions:
 
-To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
+- `deposit(uint256 _amount)`: Deposits funds into the contract, enforcing that the deposit amount must be greater than zero using `require()`. Gas is refunded upon error.
+- `withdrawA(uint256 _amount)`: Withdraws funds from the contract, ensuring that the contract has enough balance to fulfill the withdrawal request using `assert()`. All remaining gas is consumed upon error.
+- `withdrawR(uint256 _amount)`: Similar to `withdrawA`, this function allows for fund withdrawal. It utilizes `revert()` to handle the error condition if the contract lacks sufficient balance. An optional custom error message, "Insufficient balance," is provided, and remaining gas is refunded upon error.
 
-Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., newfile.sol). Copy and paste the code in the myTokenContract and then complie it by pressing "ctrl+s".
+## Usage
 
-Now on the Left hand side, click and open the 'Deploy and run tracsactions' tab. scroll and click deploy. After deploying it successfully, scroll in the left hand side tab and look for 'deployed contracts', now by tapping on the buttons u can view the token name, token abbreviation, total suppy of the tokens. Additionally, by using a sample address u can mint tokens or burn them.
-## Added changes
+### Getting Started
 
-There's two kinds of burn functions in the code. The 'burn' function uses conditionl statement (if-else) to burn the token when there is enough availability as the balance of tokens or total supply can't go in negative. when the value to be deducted is greater than the balance of the wallet, it simply does nothing and the burn operation is ignored.
+To interact with the ErrorHandling contract:
 
-In the second burn funtion 'burn2', it does the same but uses a require statement to revert the transaction if the balance is insufficient and gives an error message.
+1. **Deploy the Contract**: Use a compatible Ethereum development environment or blockchain network to deploy the contract.
+2. **Interact with Functions**: After deployment, call the `deposit`, `withdrawA`, and `withdrawR` functions with appropriate parameters to observe the error handling mechanisms in action.
+3. **Observe Error Handling**: Experiment with different inputs to understand how `require()`, `assert()`, and `revert()` handle errors in various scenarios.
 
-## Authors
-- [@flash496](https://www.github.com/flash496)
+## License
+
+This smart contract is released under the [MIT License](LICENSE).
+
