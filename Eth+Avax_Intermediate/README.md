@@ -7,13 +7,17 @@ ErrorHandling is a simple Solidity smart contract that showcases different error
 The ErrorHandling contract allows users to interact with three main functions:
 
 - `deposit(uint _amount)`: Deposits funds into the contract, ensuring that the deposit amount must be greater than 0 using `require()`. An optional custom error message, "Amount must be greater than zero" is provided, and remaining gas is refunded upon error.
+  
 - `withdrawA(uint _amount)`: Withdraws funds from the contract, ensuring that the contract has enough balance to fulfill the withdrawal request using `assert()`. All remaining gas is consumed upon error.
+  
 - `withdrawR(uint _amount)`: Similar to `withdrawA`, this function allows for fund withdrawal but, It utilizes `revert()` to handle the error condition if the contract lacks sufficient balance. An optional custom error message, "Insufficient balance," is provided, and remaining gas is refunded upon error.
 
 ### Purpose:
 
 `require()`: Validate conditions that should be true before executing the function logic.
+
 `revert()`: Explicitly trigger a revert, often used in more complex error handling.
+
 `assert()`: Ensure conditions that should never be false, used for catching bugs and checking invariants.
 
 ## Usage
