@@ -22,7 +22,7 @@ To interact with the ErrorHandling contract:
 
 ## License
 
-This smart contract is released under the [MIT License](LICENSE).
+This smart contract is released under the [MIT License].
 
 ## Authors
 
