@@ -4,8 +4,9 @@ pragma solidity ^0.8.0;
 contract ErrorHandling {
     uint256 public balance;
 
-    function deposit(uint256 _amount) external {
+    function deposit(uint _amount) external {
         // Ensures that the deposit amount must be not 0
+        // with an optional custom message
         // refunds remaining gas upon error
         require(_amount > 0, "Amount must be greater than zero");
         
@@ -13,7 +14,7 @@ contract ErrorHandling {
         balance += _amount;
     }
 
-    function withdrawA(uint256 _amount) external {
+    function withdrawA(uint _amount) external {
         // Ensure that the contract has enough balance using assert
         // The remaining gas is consumed upon error
         assert(balance >= _amount);
@@ -22,7 +23,7 @@ contract ErrorHandling {
         balance -= _amount;
     }
 
-    function withdrawR(uint256 _amount) external {
+    function withdrawR(uint _amount) external {
         // Checks if the contract has enough balance 
         if (balance < _amount) {
             // If the condition is false then the transaction is reverted 
