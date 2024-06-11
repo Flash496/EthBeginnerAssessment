@@ -24,3 +24,6 @@ To interact with the ErrorHandling contract:
 
 This smart contract is released under the [MIT License](LICENSE).
 
+## Authors
+
+- [@flash496](https://www.github.com/flash496)
