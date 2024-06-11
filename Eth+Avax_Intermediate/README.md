@@ -27,8 +27,7 @@ The ErrorHandling contract allows users to interact with three main functions:
 To interact with the ErrorHandling contract:
 
 1. **Deploy the Contract**: To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
-   Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., ErrorHandling.sol).
-   To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.0", and then click on the "Compile ErrorHandling.sol" button.
+   Once you are on the Remix website compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.0", and then click on the "Compile ErrorHandling.sol" button.
 Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "ErrorHandling" contract from the dropdown menu, and then click on the "Deploy" button.
 
 3. **Interact with Functions**: After deployment, call the `deposit`, `withdrawA`, and `withdrawR` functions with integer values to observe the error handling mechanisms in action.
