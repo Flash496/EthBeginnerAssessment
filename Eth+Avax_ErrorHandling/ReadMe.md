@@ -4,12 +4,7 @@ This Solidity smart contract implements a voting system on the Ethereum blockcha
 
 ## Description
 
-The Voting contract allows users to vote for one of three options within a specified time frame. It showcases fundamental concepts of smart contract development, including:
-
-- Time-based constraints
-- Ownership control
-- Vote tracking and tallying
-- Error handling using Solidity's built-in functions
+The Voting contract allows users to vote for one of three options within a specified time frame. It showcases fundamental concepts of smart contract development, including Time-based constraints, Ownership control, Vote tracking and tallying, and Error handling using Solidity's built-in functions
 
 ## Functions
 
@@ -17,18 +12,18 @@ The Voting contract allows users to vote for one of three options within a speci
 - Sets the voting duration and contract owner.
 
 ### vote_1or2or3(uint _choice)
-- Allows a user to cast a vote for one of the three options.
-- Uses `require()` to check voting eligibility and validity.
-- Uses `assert()` to guard against vote count overflow.
+- It allows a user to cast a vote for one of the three options.
+- It uses `require()` to check voting eligibility and validity.
+- It uses `assert()` to guard against vote count overflow.
 
 ### endVoting()
-- Allows the owner to end voting prematurely.
-- Uses `require()` to restrict access to the owner.
-- Uses `revert()` to prevent ending before the set duration.
+- It allows the owner to end voting prematurely.
+- It uses `require()` to restrict access to the owner.
+- It uses `revert()` to prevent ending before the set duration.
 
 ### getResults()
-- Returns the vote counts for all options.
-- Uses `require()` to ensure that it can only be called after voting has ended.
+- It returns the vote counts for all options.
+- It uses `require()` to ensure that it can only be called after voting has ended.
 
 
 ## Getting Started
