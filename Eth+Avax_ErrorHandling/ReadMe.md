@@ -28,7 +28,7 @@ The Voting contract allows users to vote for one of three options within a speci
 
 ### getResults()
 - Returns the vote counts for all options.
-- Can only be called after voting has ended.
+- Uses `require()` to ensure that it can only be called after voting has ended.
 
 
 ## Getting Started
