@@ -62,8 +62,8 @@ The FlashToken contract provides several key functionalities:
 
 These functions provides an efficient way to create customizable ERC20 tokens, suitable for various applications in decentralized finance (DeFi), governance, or as a utility token in blockchain-based applications.
 
-Authors
+## Authors
 [@flash496](https://github.com/Flash496)
 
-License
+## License
 This project is licensed under the MIT License
