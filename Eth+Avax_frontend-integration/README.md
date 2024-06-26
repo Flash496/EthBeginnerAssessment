@@ -1,41 +1,40 @@
-# Simple Interest Calculation Smart Contract
+# Smart contract Frontend Integration 
 
-The Simple Interest Calculation smart contract demonstrates how to calculate simple interest based on principal, annual interest rate, and time in months. It also includes basic functionalities for depositing and withdrawing funds.
+The project here demonstrates how to integrate frontend to a smart contract and deploy it on the local machine.
+It includes basic functionalities for depositing and withdrawing funds and also for calculating interest based on principal, annual interest rate, and time in months.
 
 ## Contract Overview
 
+The starter template for this project was taken from "https://github.com/MetacrafterChris/SCM-Starter.git". Then I modified the contract and added custom amount for withdrawing and depositing and added the interest calculator function and also upgraded the frontend so that it looks better and works with the modified contract.
+
 This contract provides the following functionalities:
 
-- **Deposit Functionality**: Allows the contract owner to deposit funds into the contract.
+- **Deposit Function**: It allows the contract owner to deposit funds into the contract.
   
-- **Withdraw Functionality**: Allows the contract owner to withdraw funds from the contract, ensuring sufficient balance using custom error handling.
+- **Withdraw Function**: It allows the contract owner to withdraw funds from the contract, ensuring sufficient balance using custom error handling.
 
-- **Interest Calculation**: Includes a function to calculate simple interest based on principal, annual interest rate, and time in months.
+- **Interest Calculator Function**: It includes a function to calculate simple interest based on principal, annual interest rate, and time in months.
 
-### Purpose
 
-This contract illustrates the implementation of basic financial calculations and transactional operations on the Ethereum blockchain. It showcases:
+## Execution
+# Starter Next/Hardhat Project
 
-- **Error Handling Mechanisms**: Demonstrates the use of custom errors and assertions to ensure transactional integrity and user safety.
-  
-- **Transactional Operations**: Provides functionalities for users to interact with the contract by depositing, withdrawing funds, and calculating interest.
+After cloning the github, you will want to do the following to get the code running on your computer.
 
-## Usage
+1. Inside the project directory, in the terminal type: npm i
+2. Open two additional terminals in your VS code
+3. In the second terminal type: npx hardhat node
+4. In the third terminal, type: npx hardhat run --network localhost scripts/deploy.js
+5. Back in the first terminal, type npm run dev to launch the front-end.
 
-### Getting Started
-
-To interact with the Simple Interest Calculation contract:
-
-1. **Deploy the Contract**: Use Remix, an online Solidity IDE, to deploy the contract. Compile the code and deploy it on a testnet or a local blockchain network.
-
-2. **Interact with Functions**: Use a frontend application (built with React, for example) to connect to the deployed contract. Implement UI components for depositing, withdrawing, and calculating interest.
-
-3. **Handle Transactions**: Ensure proper handling of transactions, including error checking and user feedback.
+After this, the project will be running on your localhost. 
+Typically at http://localhost:3000/
 
 ## Authors
 
-- [@YourGitHubUsername](https://github.com/YourGitHubUsername)
+- [@Flash496](https://github.com/Flash496)
+- [@MetacrafterChris](https://github.com/metacrafterchris) who provided the starter template.
 
 ## License
 
-This smart contract is released under the MIT License. See the LICENSE.md file for details.
+This smart contract is released under the MIT License.
