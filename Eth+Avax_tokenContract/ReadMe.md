@@ -60,7 +60,7 @@ The FlashToken contract provides several key functionalities:
    - The contract has an owner (initially the deployer).
    - Ownership can be transferred to another address.
 
-These functionalities provide a basic yet comprehensive framework for a customizable ERC20 token, suitable for various applications in decentralized finance (DeFi), governance, or as a utility token in blockchain-based applications.
+These functions provides an efficient way to create customizable ERC20 tokens, suitable for various applications in decentralized finance (DeFi), governance, or as a utility token in blockchain-based applications.
 
 Authors
 [@flash496](https://github.com/Flash496)
