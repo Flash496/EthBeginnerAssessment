@@ -1,6 +1,6 @@
-# SimpleToken ERC20 Contract
+# FlashToken ERC20 Contract
 
-This Solidity program implements a basic ERC20 token contract called SimpleToken. It demonstrates the fundamental functionality of creating, transferring, and burning tokens on the Ethereum blockchain. The purpose of this program is to serve as a starting point for those who want to create their own ERC20 token and understand the basics of token economics.
+This Solidity program implements a basic ERC20 token contract called FlashToken. It demonstrates the fundamental functionality of creating, transferring, and burning tokens on the Ethereum blockchain. The purpose of this program is to serve as a starting point for those who want to create their own ERC20 token and understand the basics of token economics.
 
 ## Description
 
@@ -10,7 +10,7 @@ This program is a smart contract written in Solidity, designed for the Ethereum 
 - Transferring tokens between addresses
 - A maximum supply cap of 1 million tokens
 
-This SimpleToken contract can be used as a foundation for more complex token systems or as a learning tool for understanding ERC20 token implementation.
+This FlashToken contract can be used as a foundation for more complex token systems or as a learning tool for understanding ERC20 token implementation.
 
 ## Getting Started
 
@@ -18,28 +18,52 @@ This SimpleToken contract can be used as a foundation for more complex token sys
 
 To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
 
-Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., SimpleToken.sol). Copy and paste the following code into the file:
+Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., FlashToken.sol). Copy and paste the code in the given token.sol file into ur file.
 
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.20" (or another compatible version), and then click on the "Compile FlashToken.sol" button.
+Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "FlashToken" contract from the dropdown menu, and then click on the "Deploy" button.
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
+After the contract is deployed, you can interact with it by using its functions.
 
-contract SimpleToken is ERC20, Ownable {
-    uint256 public constant MAX_SUPPLY = 1000000 * 10**18; // 1 million tokens
-    
-    constructor() ERC20("SimpleToken", "SIM") Ownable(msg.sender) {
-        _mint(msg.sender, 100000 * 10**18);
-    }
+## Functionalities
 
-    function mint(address to, uint256 amount) public onlyOwner {
-        require(totalSupply() + amount <= MAX_SUPPLY, "Exceeds maximum supply");
-        _mint(to, amount);
-    }
+The FlashToken contract provides several key functionalities:
 
-    function burn(uint256 amount) public {
-        _burn(msg.sender, amount);
-    }
-}
+1. Token Information:
+   - Name: FlashToken
+   - Symbol: Flash
+   - Decimals: 18 (default for ERC20)
+   - Maximum Supply: 1,000,000 tokens
+
+2. Initial Minting:
+   - Upon deployment, 100,000 tokens are minted to the contract deployer's address.
+
+3. Minting (Owner Only):
+   - The contract owner can mint new tokens to any address.
+   - Minting is restricted by the maximum supply cap of 1,000,000 tokens.
+
+4. Burning:
+   - Any token holder can burn (destroy) their own tokens.
+
+5. Transferring:
+   - Token holders can transfer their tokens to any other address.
+
+6. Allowances:
+   - Token holders can approve other addresses to spend a certain amount of their tokens.
+   - Approved spenders can transfer tokens on behalf of the token holder.
+
+7. Balance and Supply Queries:
+   - Anyone can check the token balance of any address.
+   - The total supply of tokens in circulation can be queried.
+
+8. Ownership Management:
+   - The contract has an owner (initially the deployer).
+   - Ownership can be transferred to another address.
+
+These functionalities provide a basic yet comprehensive framework for a customizable ERC20 token, suitable for various applications in decentralized finance (DeFi), governance, or as a utility token in blockchain-based applications.
+
+Authors
+[@flash496](https://github.com/Flash496)
+
+License
+This project is licensed under the MIT License
