@@ -1,4 +1,4 @@
-# Simple Voting Smart Contract
+# Voting Smart Contract
 
 This Solidity smart contract implements a basic voting system on the Ethereum blockchain. It demonstrates the use of `require()`, `assert()`, and `revert()` statements for error handling and control flow.
 
