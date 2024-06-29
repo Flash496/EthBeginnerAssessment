@@ -28,8 +28,8 @@ Available_NFTs - Returns a list of available NFTs in the marketplace.
 NFT_Price - Returns the price of a specific NFT.
 redeem_NFT - Allows users to purchase NFTs using DGN tokens.
 Owned_NFTs() - Returns a list of NFTs owned by the caller.
-resellNFT - Allows users to resell their NFTs back to the marketplace for 90% of the original price.
-transfer_NFT - Allows users to transfer their NFTs to other users for 90% of the original price.
+- resellNFT - Allows users to resell their NFTs back to the marketplace for 90% of the original price.
+- transfer_NFT - Allows users to transfer their NFTs to other users for 90% of the original price.
 
 ## Getting Started
 
