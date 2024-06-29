@@ -16,14 +16,14 @@ The DegenToken contract allows for the creation, transfer, and management of bot
 
 ### Token Management
 
-- mint_DGN - It allows the owner to mint new DGN tokens to a specified address.
-- burn_DGN - It allows users to burn their own DGN tokens.
+- mint_DGN - It allows the owner to mint new DGN tokens to a specified address. (only for Owner)
+- burn_DGN - It allows users to burn their own DGN tokens. (only for Owner)
 - transfer - It's an overriden ERC20 transfer function to include logging.
 
 ### NFT Management
 
-- mint_NFT - Allows the owner to create new NFTs in the marketplace.
-- Burn_NFT - Allows the owner to remove NFTs from the marketplace.
+- mint_NFT - Allows the owner to create new NFTs in the marketplace. (only for Owner)
+- Burn_NFT - Allows the owner to remove NFTs from the marketplace. (only for Owner)
 - Available_NFTs - Returns a list of available NFTs in the marketplace.
 - NFT_Price - Returns the price of a specific NFT.
 - redeem_NFT - Allows users to purchase NFTs using DGN tokens.
