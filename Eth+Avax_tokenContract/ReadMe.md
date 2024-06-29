@@ -7,7 +7,7 @@ This Solidity program implements a basic ERC20 token contract called FlashToken.
 This program is a smart contract written in Solidity, designed for the Ethereum blockchain. The contract creates an ERC20 token with the following features:
 - Minting new tokens (restricted to the contract owner)
 - Burning tokens
-- Transferring tokens between addresses
+- Transferring tokens between addresses with logging
 - A maximum supply cap of 1 million tokens
 
 This FlashToken contract can be used as a foundation for more complex token systems or as a learning tool for understanding ERC20 token implementation.
@@ -18,9 +18,10 @@ This FlashToken contract can be used as a foundation for more complex token syst
 
 To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
 
-Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., FlashToken.sol). Copy and paste the code in the given token.sol file into ur file.
+Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., FlashToken.sol). Copy and paste the provided code into your file.
 
 To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.20" (or another compatible version), and then click on the "Compile FlashToken.sol" button.
+
 Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "FlashToken" contract from the dropdown menu, and then click on the "Deploy" button.
 
 After the contract is deployed, you can interact with it by using its functions.
@@ -47,6 +48,7 @@ The FlashToken contract provides several key functionalities:
 
 5. Transferring:
    - Token holders can transfer their tokens to any other address.
+   - The transfer function is explicitly overridden to include logging.
 
 6. Allowances:
    - Token holders can approve other addresses to spend a certain amount of their tokens.
@@ -60,10 +62,15 @@ The FlashToken contract provides several key functionalities:
    - The contract has an owner (initially the deployer).
    - Ownership can be transferred to another address.
 
-These functions provides an efficient way to create customizable ERC20 tokens, suitable for various applications in decentralized finance (DeFi), governance, or as a utility token in blockchain-based applications.
+9. Logging:
+   - The transfer function logs details of each transfer using Hardhat's console.log.
+
+These functions provide an efficient way to create customizable ERC20 tokens, suitable for various applications in decentralized finance (DeFi), governance, or as a utility token in blockchain-based applications.
 
 ## Authors
+
 [@flash496](https://github.com/Flash496)
 
 ## License
+
 This project is licensed under the MIT License
