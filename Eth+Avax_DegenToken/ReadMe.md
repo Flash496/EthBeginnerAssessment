@@ -16,40 +16,29 @@ The DegenToken contract allows for the creation, transfer, and management of bot
 
 ### Token Management
 
-#### mint_DGN(address to, uint256 amount)
-- Allows the owner to mint new DGN tokens to a specified address.
+#### mint_DGN - Allows the owner to mint new DGN tokens to a specified address.
 
-#### burn_DGN(uint256 amount)
-- Allows users to burn their own DGN tokens.
+#### burn_DGN - Allows users to burn their own DGN tokens.
 
-#### transfer(address to, uint256 amount)
-- Overrides the ERC20 transfer function to include logging.
+#### transfer - Overrides the ERC20 transfer function to include logging.
 
 ### NFT Management
 
-#### mint_NFT
-- Allows the owner to create new NFTs in the marketplace.
+#### mint_NFT - Allows the owner to create new NFTs in the marketplace.
 
-#### Burn_NFT
-- Allows the owner to remove NFTs from the marketplace.
+#### Burn_NFT - Allows the owner to remove NFTs from the marketplace.
 
-#### Available_NFTs
-- Returns a list of available NFTs in the marketplace.
+#### Available_NFTs - Returns a list of available NFTs in the marketplace.
 
-#### NFT_Price
-- Returns the price of a specific NFT.
+#### NFT_Price - Returns the price of a specific NFT.
 
-#### redeem_NFT
-- Allows users to purchase NFTs using DGN tokens.
+#### redeem_NFT - Allows users to purchase NFTs using DGN tokens.
 
-#### Owned_NFTs()
-- Returns a list of NFTs owned by the caller.
+#### Owned_NFTs() - Returns a list of NFTs owned by the caller.
 
-#### resellNFT
-- Allows users to resell their NFTs back to the marketplace for 90% of the original price.
+#### resellNFT - Allows users to resell their NFTs back to the marketplace for 90% of the original price.
 
-#### transfer_NFT
-- Allows users to transfer their NFTs to other users for 90% of the original price.
+#### transfer_NFT - Allows users to transfer their NFTs to other users for 90% of the original price.
 
 ## Getting Started
 
