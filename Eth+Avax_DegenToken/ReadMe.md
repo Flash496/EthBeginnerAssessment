@@ -1,6 +1,6 @@
 # DegenToken Smart Contract
 
-This Solidity smart contract implements an ERC20 token with additional NFT functionality for a gaming ecosystem on the Ethereum blockchain. It demonstrates the use of OpenZeppelin libraries, custom NFT structures, and various token management functions.
+This Solidity smart contract implements an ERC20 token with additional NFT functionality for a gaming ecosystem on the Avalanche blockchain. It demonstrates the use of OpenZeppelin libraries, custom NFT structures, and various token management functions.
 
 ## Description
 
@@ -58,19 +58,26 @@ The DegenToken contract allows for the creation, transfer, and management of bot
 To run this program, you can use Remix, an online Solidity IDE. Follow these steps:
 
 1. Go to https://remix.ethereum.org/
-2. Create a new file and name it `DegenToken.sol`.
-3. Copy and paste the provided code into the file.
+2. Create a new file and name it `DegenToken.sol`
+3. Copy and paste the provided code into the file
 4. Compile the contract by clicking on the "Solidity Compiler" tab and then "Compile DegenToken.sol"
 
-### To use this contract:
+### Deployment
 
-1. Deploy the contract by going to the "Deploy & Run Transactions" tab, selecting "DegenToken" from the dropdown, and clicking "Deploy"
-2. Use the various functions to interact with the token and NFT ecosystem:
-   - Mint DGN tokens using `mint_DGN`
-   - Create NFTs using `mint_NFT`
-   - Allow users to purchase NFTs with `redeem_NFT`
-   - Enable NFT trading between users with `transfer_NFT`
-   - Manage the NFT marketplace with other provided functions
+This contract was deployed on the Fuji C-Chain testnet using the following steps:
+
+1. Connect MetaMask to the Remix IDE by selecting "Injected Provider - MetaMask" in the "Environment" dropdown of the "Deploy & Run Transactions" tab.
+2. Ensure your MetaMask is connected to the Avalanche Fuji Testnet.
+3. Obtain test AVAX from the Avalanche Testnet Faucet (https://faucet.avax.network/) and add it to your MetaMask wallet.
+4. Deploy the contract using the "Deploy" button in Remix.
+5. Use the deployed contract's functions to interact with the token and NFT ecosystem.
+
+### Monitoring Transactions
+
+To monitor the transactions and contract interactions:
+
+1. Use Snowtrace (https://testnet.snowtrace.io/) to view and verify transactions on the Fuji testnet.
+2. Enter the contract address or transaction hash in Snowtrace to see detailed information about the interactions.
 
 ## Authors
 
