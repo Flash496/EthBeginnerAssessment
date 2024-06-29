@@ -21,6 +21,7 @@ contract DegenToken is ERC20, Ownable {
     event NFTDeleted(uint256 itemId, string name);
     event NFTTransferred(address from, address to, uint256 itemId, string name, uint256 price);
 
+
     constructor() ERC20("Degen", "DGN") Ownable(msg.sender) {
         console.log("Deploying Degen Gaming Token");
     }
@@ -38,8 +39,8 @@ contract DegenToken is ERC20, Ownable {
         console.log("Burned %s tokens from %s", amount, msg.sender);
     }
 
-    function transfer_DGN(address to, uint256 amount) public virtual returns (bool) {
-        bool success = transfer(to, amount);          
+    function transfer(address to, uint256 amount) override public virtual returns (bool) {
+        bool success = super.transfer(to, amount);          //super keyword keeps the original function from the parent contract
         if (success) {
             console.log("Transferred %s tokens from %s to %s", amount, msg.sender, to);
         }
