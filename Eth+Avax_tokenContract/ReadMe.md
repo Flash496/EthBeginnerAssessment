@@ -54,18 +54,24 @@ The FlashToken contract provides these functionas:
 
 ## Getting Started
 
-### Executing program
+## Executing the Program
 
-To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
+### To run this program, you can use Remix, an online Solidity IDE. Follow these steps:
 
-Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., FlashToken.sol). Copy and paste the provided code into your file.
+1. Go to https://remix.ethereum.org/
+2. Create a new file and name it `FlashToken.sol`
+3. Copy and paste the provided code into the file
+4. Compile the contract by clicking on the "Solidity Compiler" tab and then "Compile FlashToken.sol"
 
-To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.20" (or another compatible version), and then click on the "Compile FlashToken.sol" button.
+### To use this contract:
 
-Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "FlashToken" contract from the dropdown menu, and then click on the "Deploy" button.
-
-After the contract is deployed, you can interact with it by using its functions.
-
+1. Deploy the contract by going to the "Deploy & Run Transactions" tab, selecting "FlashToken" from the dropdown, and clicking "Deploy"
+2. The deployer's address will automatically receive 100,000 FlashTokens upon deployment
+3. The contract owner can mint new tokens to any address using the `mint` function
+4. Users can transfer tokens to other addresses using the `transfer` function
+5. Token holders can burn their tokens using the `burn` function
+6. Anyone can check token balances using the `balanceOf` function
+7. The total supply of tokens can be checked using the `totalSupply` function.
 
 ## Authors
 
