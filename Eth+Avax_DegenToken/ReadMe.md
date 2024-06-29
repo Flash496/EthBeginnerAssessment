@@ -27,28 +27,28 @@ The DegenToken contract allows for the creation, transfer, and management of bot
 
 ### NFT Management
 
-#### mint_NFT(string memory name, uint256 price)
+#### mint_NFT
 - Allows the owner to create new NFTs in the marketplace.
 
-#### Burn_NFT(uint256 itemId)
+#### Burn_NFT
 - Allows the owner to remove NFTs from the marketplace.
 
-#### Available_NFTs()
+#### Available_NFTs
 - Returns a list of available NFTs in the marketplace.
 
-#### NFT_Price(uint256 itemId)
+#### NFT_Price
 - Returns the price of a specific NFT.
 
-#### redeem_NFT(uint256 itemId)
+#### redeem_NFT
 - Allows users to purchase NFTs using DGN tokens.
 
 #### Owned_NFTs()
 - Returns a list of NFTs owned by the caller.
 
-#### resellNFT(uint256 itemId)
+#### resellNFT
 - Allows users to resell their NFTs back to the marketplace for 90% of the original price.
 
-#### transfer_NFT(address to, uint256 itemId)
+#### transfer_NFT
 - Allows users to transfer their NFTs to other users for 90% of the original price.
 
 ## Getting Started
@@ -81,7 +81,7 @@ To monitor the transactions and contract interactions:
 
 ## Authors
 
-[Your Name or Username]
+[@flash496](https://github.com/Flash496)
 
 ## License
 
