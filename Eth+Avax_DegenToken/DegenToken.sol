@@ -58,7 +58,7 @@ contract DegenToken is ERC20, Ownable {
         emit NFTMinted(newItemId, name, price);
     }
 
-    function Burn_NFT(uint256 itemId) public onlyOwner {
+    function burn_NFT(uint256 itemId) public onlyOwner {
         require(itemId < nftItems.length, "Invalid item ID");
         require(nftItems[itemId].isAvailable, "NFT is not available for deletion");
         
@@ -70,7 +70,7 @@ contract DegenToken is ERC20, Ownable {
     }
 
 //Lists all available NFTs in the store
-    function Available_NFTs() public view returns (string[] memory, uint256[] memory) {
+    function available_NFTs() public view returns (string[] memory, uint256[] memory) {
         uint availableCount = 0;
         for (uint i = 0; i < nftItems.length; i++) {
             if (nftItems[i].isAvailable) {
@@ -117,7 +117,7 @@ contract DegenToken is ERC20, Ownable {
 
 
 //Returns Owned NFTs of a player
-    function Owned_NFTs() public view returns (string[] memory) {
+    function owned_NFTs() public view returns (string[] memory) {
         uint ownedCount = 0;
         for (uint i = 0; i < nftItems.length; i++) {
             if (ownedNFTs[msg.sender][i]) {
