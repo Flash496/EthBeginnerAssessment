@@ -39,7 +39,7 @@ contract DegenToken is ERC20, Ownable {
     }
 
     function transfer_DGN(address to, uint256 amount) public virtual returns (bool) {
-        bool success = super.transfer(to, amount);          //super keyword keeps the original function from the parent contract
+        bool success = transfer(to, amount);          
         if (success) {
             console.log("Transferred %s tokens from %s to %s", amount, msg.sender, to);
         }
