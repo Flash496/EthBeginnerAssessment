@@ -16,9 +16,9 @@ The DegenToken contract allows for the creation, transfer, and management of bot
 
 ### Token Management
 
-- mint_DGN - Allows the owner to mint new DGN tokens to a specified address.
-- burn_DGN - Allows users to burn their own DGN tokens.
-- transfer - Overrides the ERC20 transfer function to include logging.
+- mint_DGN - It allows the owner to mint new DGN tokens to a specified address.
+- burn_DGN - It allows users to burn their own DGN tokens.
+- transfer - It's an overriden ERC20 transfer function to include logging.
 
 ### NFT Management
 
