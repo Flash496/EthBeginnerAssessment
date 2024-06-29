@@ -6,7 +6,8 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "hardhat/console.sol";
 
 contract DegenToken is ERC20, Ownable {
-    
+
+//structure of our NFTs that will be in the store
     struct NFTItem {
         string name;
         uint256 price;
@@ -16,6 +17,7 @@ contract DegenToken is ERC20, Ownable {
     NFTItem[] public nftItems;
     mapping(address => mapping(uint256 => bool)) public ownedNFTs;
 
+//events that will be useful when we integrate it with a frontend
     event NFTRedeemed(address player, uint256 itemId, string name);
     event NFTMinted(uint256 itemId, string name, uint256 price);
     event NFTBurned(uint256 itemId, string name);
