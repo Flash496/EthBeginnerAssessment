@@ -33,17 +33,21 @@ The Voting contract allows users to vote for one of three options within a speci
 ### To run this program, you can use Remix, an online Solidity IDE. Follow these steps:
 
 1. Go to https://remix.ethereum.org/
-2. Create a new file and name it `Voting.sol`
+2. Create a new file and name it `FlashToken.sol`
 3. Copy and paste the provided code into the file
-4. Compile the contract by clicking on the "Solidity Compiler" tab and then "Compile Voting.sol"
+4. Compile the contract by clicking on the "Solidity Compiler" tab and then "Compile FlashToken.sol"
 
 ### To use this contract:
 
-1. Deploy the contract by going to the "Deploy & Run Transactions" tab, selecting "Voting" from the dropdown, entering the voting duration in minutes, and clicking "Deploy"
-2. Users can call `vote_1or2or3` to cast their votes to 1, 2, or 3.
-3. The owner can call `endVoting()` to close the vote after the duration has passed.
-4. Anyone can call `getResults()` to view the final vote counts.
+1. Deploy the contract by going to the "Deploy & Run Transactions" tab, selecting "FlashToken" from the dropdown, and clicking "Deploy"
+2. The deployer's address will automatically receive 100,000 FlashTokens upon deployment
+3. The contract owner can mint new tokens to any address using the `mint` function
+4. Users can transfer tokens to other addresses using the `transfer` function
+5. Token holders can burn their tokens using the `burn` function
+6. Anyone can check token balances using the `balanceOf` function
+7. The total supply of tokens can be checked using the `totalSupply` function.
 
+   
 ## Authors
 
 [@flash496](https://github.com/Flash496)
