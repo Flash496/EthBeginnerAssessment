@@ -18,12 +18,13 @@ contract DegenToken is ERC20, Ownable {
 
     event NFTRedeemed(address player, uint256 itemId, string name);
     event NFTMinted(uint256 itemId, string name, uint256 price);
-    event NFTDeleted(uint256 itemId, string name);
+    event NFTBurned(uint256 itemId, string name);
     event NFTTransferred(address from, address to, uint256 itemId, string name, uint256 price);
+    event NFTResold(address player, uint256 itemId, string name);
 
 
     constructor() ERC20("Degen", "DGN") Ownable(msg.sender) {
-        console.log("Deploying Degen Gaming Token");
+        console.log("Deployed Degen Gaming Token");
     }
 
 
@@ -40,11 +41,11 @@ contract DegenToken is ERC20, Ownable {
     }
 
     function transfer(address to, uint256 amount) override public virtual returns (bool) {
-        bool success = super.transfer(to, amount);          //super keyword keeps the original function from the parent contract
-        if (success) {
+        bool transferred = super.transfer(to, amount);          //super keyword keeps the original transfer function from the parent contract (ERC20)
+        if (transferred) {
             console.log("Transferred %s tokens from %s to %s", amount, msg.sender, to);
         }
-        return success;
+        return transferred;
     }
     
 
@@ -59,7 +60,7 @@ contract DegenToken is ERC20, Ownable {
         require(itemId < nftItems.length, "Invalid item ID");
         require(nftItems[itemId].isAvailable, "NFT is not available for deletion");
         
-        emit NFTDeleted(itemId, nftItems[itemId].name);
+        emit NFTBurned(itemId, nftItems[itemId].name);
         
         // Move the last item to the deleted position
         nftItems[itemId] = nftItems[nftItems.length - 1];
@@ -133,6 +134,20 @@ contract DegenToken is ERC20, Ownable {
         }
 
         return ownedNFTNames;
+    }
+
+//Function that lets u resell the NFTs for 90 percent of its original value back to the store
+    function resellNFT(uint256 itemId) public {
+        require(itemId < nftItems.length, "Invalid item ID");
+        require(ownedNFTs[msg.sender][itemId], "You don't own this NFT");
+
+        uint256 resellPrice = nftItems[itemId].price * 90 / 100; // 90% of original price
+        _mint(msg.sender, resellPrice);
+        ownedNFTs[msg.sender][itemId] = false;
+        nftItems[itemId].isAvailable = true;
+
+        console.log("Player %s resold NFT %s", msg.sender, itemId);
+        emit NFTResold(msg.sender, itemId, nftItems[itemId].name);
     }
 
 
